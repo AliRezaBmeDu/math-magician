@@ -1,3 +1,7 @@
+# math-magician
+This project is created by react framework. It aims to develop a calculator and a math quote block displayed in a single page app.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
