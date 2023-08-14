@@ -1,0 +1,44 @@
+:root {
+  --primary-color: #005fff;
+  --primary-color-alpha: #005fff1a;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  width: 300px;
+  margin: 0 auto; /* Center the grid container */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-span {
+  grid-column: 1 / -1; /* Span across all columns */
+  background-color: lightgray;
+  display: block;
+  height: 40px;
+}
+
+.half-span {
+  grid-column: span 2; /* Span two columns */
+  background-color: lightgray;
+  display: block;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
