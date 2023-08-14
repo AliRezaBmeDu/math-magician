@@ -42,3 +42,7 @@ body {
   text-align: center;
   line-height: 40px;
 }
+
+.row:not(:first-child) span:last-child {
+  background-color: orchid; /* Set your desired color */
+}
