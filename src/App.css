@@ -14,12 +14,18 @@ body {
   height: 100%;
 }
 
+/*--------------Calculator-------------*/
+
 .grid-container {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
-  grid-gap: 5px;
-  width: 300px;
-  margin: 0 auto; /* Center the grid container */
+  grid-gap: 1px;
+  width: 400px;
+  margin: 5rem auto; /* Center the grid container */
+  box-sizing: border-box;
+  border: solid 2px rgb(103, 77, 219);
+  border-radius: 4px;
+  padding: 1rem;
 }
 
 .row {
@@ -29,20 +35,42 @@ body {
 
 .full-span {
   grid-column: 1 / -1; /* Span across all columns */
-  background-color: lightgray;
+  background-color: lightblue;
   display: block;
-  height: 40px;
+  width: 100%;
+  text-align: end;
+  padding: 1rem;
+  border-radius: 4px;
 }
 
-.half-span {
-  grid-column: span 2; /* Span two columns */
-  background-color: lightgray;
-  display: block;
-  height: 40px;
+.row span {
+  box-sizing: border-box;
+  border: solid 0.5px rgb(238, 238, 241);
+  font-size: large;
+  font-weight: 700;
+}
+
+.row span:not(.full-span) {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
   text-align: center;
-  line-height: 40px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.row:last-child {
+  justify-content: flex-start; /* Align the items to the start of the row */
+}
+
+.row:last-child span:first-child {
+  flex: 1 1 50%;
+}
+
+.row:last-child span:not(:first-child) {
+  flex: 1 1 calc(50% / 2);
 }
 
 .row:not(:first-child) span:last-child {
-  background-color: orchid; /* Set your desired color */
+  background-color: rgb(77, 47, 207);
 }

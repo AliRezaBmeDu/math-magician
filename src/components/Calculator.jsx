@@ -3,7 +3,7 @@ import React from 'react';
 const Calculator = () => (
   <div className="grid-container">
     <div className="row first">
-      <span className="full-span" />
+      <span className="full-span">0</span>
     </div>
     <div className="row second">
       <span>AC</span>
@@ -30,7 +30,7 @@ const Calculator = () => (
       <span>+</span>
     </div>
     <div className="row sixth">
-      <span className="half-span">0</span>
+      <span>0</span>
       <span>.</span>
       <span>=</span>
     </div>
