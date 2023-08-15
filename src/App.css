@@ -1,39 +1,78 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #005fff;
+  --primary-color-alpha: #005fff1a;
+  --display-color: gray;
+  --number-color: lightgrey;
+  --operator-color: darkorange;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --------------Calculator------------- */
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 0.5px;
+  width: 400px;
+  margin: 5rem auto; /* Center the grid container */
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.full-span {
+  grid-column: 1 / -1; /* Span across all columns */
+  background-color: darkgray;
   color: white;
+  display: block;
+  width: 100%;
+  text-align: end;
+  padding: 1rem;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.row span {
+  box-sizing: border-box;
+  border: solid 0.5px rgb(238, 238, 241);
+  font-size: large;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.row span:not(.full-span) {
+  width: 100%;
+  background-color: var(--number-color);
+  color: black;
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.row:last-child {
+  justify-content: flex-start; /* Align the items to the start of the row */
+}
+
+.row:last-child span:first-child {
+  flex: 1 1 50%;
+}
+
+.row:last-child span:not(:first-child) {
+  flex: 1 1 calc(50% / 2);
+}
+
+.row:not(:first-child) span:last-child {
+  background-color: var(--operator-color);
 }
