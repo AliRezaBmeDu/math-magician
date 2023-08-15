@@ -1,40 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Display from './Display';
-// import calculate from '../logic/calculate';
+import calculate from '../logic/calculate';
 
-const Calculator = () => (
-  <div className="grid-container">
-    <Display data={[1, 2, 3]} />
-    <div className="row second">
-      <button type="button">AC</button>
-      <button type="button">+/-</button>
-      <button type="button">%</button>
-      <button type="button">÷</button>
+const Calculator = () => {
+  const initialDisplay = {
+    total: '',
+    next: null,
+    operation: null,
+  };
+
+  const [result, setResult] = useState(initialDisplay);
+
+  const handleClick = (e) => {
+    const buttonName = e.target.textContent;
+    if (!result && buttonName.match(/[0-9]+/)) {
+      setResult({
+        total: buttonName,
+        next: null,
+        operation: null,
+      });
+    } else {
+      localStorage.setItem('current', '');
+    }
+
+    setResult(calculate(result, buttonName));
+  };
+
+  return (
+    <div className="grid-container">
+      <Display data={result.total} />
+      <div className="row second">
+        <button type="button" onClick={handleClick}>AC</button>
+        <button type="button" onClick={handleClick}>+/-</button>
+        <button type="button" onClick={handleClick}>%</button>
+        <button type="button" onClick={handleClick}>÷</button>
+      </div>
+      <div className="row third">
+        <button type="button" onClick={handleClick}>7</button>
+        <button type="button" onClick={handleClick}>8</button>
+        <button type="button" onClick={handleClick}>9</button>
+        <button type="button" onClick={handleClick}>x</button>
+      </div>
+      <div className="row fourth">
+        <button type="button" onClick={handleClick}>4</button>
+        <button type="button" onClick={handleClick}>5</button>
+        <button type="button" onClick={handleClick}>6</button>
+        <button type="button" onClick={handleClick}>-</button>
+      </div>
+      <div className="row fifth">
+        <button type="button" onClick={handleClick}>1</button>
+        <button type="button" onClick={handleClick}>2</button>
+        <button type="button" onClick={handleClick}>3</button>
+        <button type="button" onClick={handleClick}>+</button>
+      </div>
+      <div className="row sixth">
+        <button type="button" onClick={handleClick}>0</button>
+        <button type="button" onClick={handleClick}>.</button>
+        <button type="button" onClick={handleClick}>=</button>
+      </div>
     </div>
-    <div className="row third">
-      <button type="button">7</button>
-      <button type="button">8</button>
-      <button type="button">9</button>
-      <button type="button">x</button>
-    </div>
-    <div className="row fourth">
-      <button type="button">4</button>
-      <button type="button">5</button>
-      <button type="button">6</button>
-      <button type="button">-</button>
-    </div>
-    <div className="row fifth">
-      <button type="button">1</button>
-      <button type="button">2</button>
-      <button type="button">3</button>
-      <button type="button">+</button>
-    </div>
-    <div className="row sixth">
-      <button type="button">0</button>
-      <button type="button">.</button>
-      <button type="button">=</button>
-    </div>
-  </div>
-);
+  );
+};
 
 export default Calculator;
