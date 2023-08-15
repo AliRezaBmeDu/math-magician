@@ -45,7 +45,8 @@ body {
   border-radius: 4px;
 }
 
-.row button,span {
+.row button,
+span {
   box-sizing: border-box;
   border: solid 0.5px rgb(238, 238, 241);
   font-size: large;

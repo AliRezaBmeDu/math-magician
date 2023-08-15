@@ -8,21 +8,10 @@ const Calculator = () => {
     next: null,
     operation: null,
   };
-
   const [result, setResult] = useState(initialDisplay);
 
   const handleClick = (e) => {
     const buttonName = e.target.textContent;
-    if (!result && buttonName.match(/[0-9]+/)) {
-      setResult({
-        total: buttonName,
-        next: null,
-        operation: null,
-      });
-    } else {
-      localStorage.setItem('current', '');
-    }
-
     setResult(calculate(result, buttonName));
   };
 
