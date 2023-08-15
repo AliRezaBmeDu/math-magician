@@ -1,7 +1,7 @@
 :root {
   --primary-color: #005fff;
   --primary-color-alpha: #005fff1a;
-  --display-color: gray;
+  --display-color: darkgray;
   --number-color: lightgrey;
   --operator-color: darkorange;
 }
@@ -36,7 +36,7 @@ body {
 
 .full-span {
   grid-column: 1 / -1; /* Span across all columns */
-  background-color: darkgray;
+  background-color: var(--display-color);
   color: white;
   display: block;
   width: 100%;
@@ -45,14 +45,15 @@ body {
   border-radius: 4px;
 }
 
-.row span {
+.row button,
+span {
   box-sizing: border-box;
   border: solid 0.5px rgb(238, 238, 241);
   font-size: large;
   font-weight: 700;
 }
 
-.row span:not(.full-span) {
+.row button:not(.full-span) {
   width: 100%;
   background-color: var(--number-color);
   color: black;
@@ -65,14 +66,34 @@ body {
   justify-content: flex-start; /* Align the items to the start of the row */
 }
 
-.row:last-child span:first-child {
+.row:last-child button:first-child {
   flex: 1 1 50%;
 }
 
-.row:last-child span:not(:first-child) {
+.row:last-child button:not(:first-child) {
   flex: 1 1 calc(50% / 2);
 }
 
-.row:not(:first-child) span:last-child {
+.row:not(:first-child) button:last-child {
   background-color: var(--operator-color);
+}
+
+.grid-container .row button:hover {
+  background-color: darkcyan;
+  color: white;
+}
+
+.grid-container .row button:active {
+  background-color: rgb(3, 77, 77);
+  color: white;
+}
+
+.row:not(:first-child) button:last-child:hover {
+  background-color: rgb(163, 50, 16);
+  color: white;
+}
+
+.row:not(:first-child) button:last-child:active {
+  background-color: rgb(26, 7, 1);
+  color: white;
 }
