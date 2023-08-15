@@ -17,7 +17,7 @@ const Calculator = () => {
 
   return (
     <div className="grid-container">
-      <Display data={result.total} />
+      <Display data={result.next || result.total || '0'} />
       <div className="row second">
         <button type="button" onClick={handleClick}>AC</button>
         <button type="button" onClick={handleClick}>+/-</button>
