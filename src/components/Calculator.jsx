@@ -1,10 +1,9 @@
 import React from 'react';
+import Display from './Display';
 
 const Calculator = () => (
   <div className="grid-container">
-    <div className="row first">
-      <span className="full-span">0</span>
-    </div>
+    <Display />
     <div className="row second">
       <span>AC</span>
       <span>+/-</span>

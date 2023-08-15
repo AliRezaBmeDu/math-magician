@@ -1,6 +1,9 @@
 :root {
   --primary-color: #005fff;
   --primary-color-alpha: #005fff1a;
+  --display-color: gray;
+  --number-color: lightgrey;
+  --operator-color: darkorange;
 }
 
 html,
@@ -19,11 +22,9 @@ body {
 .grid-container {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
-  grid-gap: 1px;
+  grid-gap: 0.5px;
   width: 400px;
   margin: 5rem auto; /* Center the grid container */
-  box-sizing: border-box;
-  border: solid 2px rgb(103, 77, 219);
   border-radius: 4px;
   padding: 1rem;
 }
@@ -35,7 +36,8 @@ body {
 
 .full-span {
   grid-column: 1 / -1; /* Span across all columns */
-  background-color: lightblue;
+  background-color: darkgray;
+  color: white;
   display: block;
   width: 100%;
   text-align: end;
@@ -52,8 +54,8 @@ body {
 
 .row span:not(.full-span) {
   width: 100%;
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--number-color);
+  color: black;
   text-align: center;
   margin: auto;
   padding: 1rem;
@@ -72,5 +74,5 @@ body {
 }
 
 .row:not(:first-child) span:last-child {
-  background-color: rgb(77, 47, 207);
+  background-color: var(--operator-color);
 }
