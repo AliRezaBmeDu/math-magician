@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Display = () => (
+const Display = ({ data }) => (
   <div className="row first">
-    <button type="button" className="full-span">0</button>
+    <span className="full-span">{ data.join(', ') }</span>
   </div>
 );
+
+Display.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
 
 export default Display;

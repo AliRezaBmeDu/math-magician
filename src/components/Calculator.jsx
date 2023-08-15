@@ -1,14 +1,15 @@
 import React from 'react';
 import Display from './Display';
+// import calculate from '../logic/calculate';
 
 const Calculator = () => (
   <div className="grid-container">
-    <Display />
+    <Display data={[1, 2, 3]} />
     <div className="row second">
       <button type="button">AC</button>
       <button type="button">+/-</button>
       <button type="button">%</button>
-      <button type="button">&divide;</button>
+      <button type="button">÷</button>
     </div>
     <div className="row third">
       <button type="button">7</button>

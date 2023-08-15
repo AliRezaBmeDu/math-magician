@@ -45,7 +45,7 @@ body {
   border-radius: 4px;
 }
 
-.row button {
+.row button,span {
   box-sizing: border-box;
   border: solid 0.5px rgb(238, 238, 241);
   font-size: large;
@@ -77,17 +77,22 @@ body {
   background-color: var(--operator-color);
 }
 
-button:hover {
-  background-color: darkcyan;
-  color: white;
-}
-
 .grid-container .row button:hover {
   background-color: darkcyan;
   color: white;
 }
 
+.grid-container .row button:active {
+  background-color: rgb(3, 77, 77);
+  color: white;
+}
+
 .row:not(:first-child) button:last-child:hover {
-  background-color: rgb(90, 27, 8);
+  background-color: rgb(163, 50, 16);
+  color: white;
+}
+
+.row:not(:first-child) button:last-child:active {
+  background-color: rgb(26, 7, 1);
   color: white;
 }
