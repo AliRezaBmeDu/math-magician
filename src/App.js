@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
 import Calculator from './components/Calculator';
+import Quote from './components/Quote';
 
 const App = () => (
-  <div>
+  <div className="main">
+    <Quote />
     <Calculator />
   </div>
 );

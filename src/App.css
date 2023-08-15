@@ -17,6 +17,64 @@ body {
   height: 100%;
 }
 
+.main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin: auto;
+}
+
+/* --------------Quote------------------ */
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 5rem auto;
+  padding: 1rem;
+  /* height: 400px; */
+}
+
+.quote {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #9ec0fa;
+  color:darkblue;
+  height: 60%;
+  text-align: center;
+  font-size: xx-large;
+  margin: auto;
+  padding: 2rem;
+}
+
+.author {
+  background-color: darkblue;
+  color: white;
+  padding: 1rem;
+  align-self: flex-end;
+  margin-top: 0.5rem;
+}
+
+.reload-button {
+  display: flex;
+  align-self: flex-end;
+  width: 30%;
+  background-color: #00f4ff;
+  color: darkblue;
+  height: 3rem;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.reload-button img {
+  margin-top: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+
 /* --------------Calculator------------- */
 
 .grid-container {
