@@ -17,6 +17,70 @@ body {
   height: 100%;
 }
 
+.main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin: auto;
+}
+
+/* --------------Quote------------------ */
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 5rem auto;
+  padding: 1rem;
+  min-height: 400px;
+}
+
+.quote-author {
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  font-style: italic;
+  background-image: url('../public/assets/quote-frame.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  color: var(--operator-color);
+  font-size: 1.5rem;
+  margin: auto;
+  max-width: 80%;
+}
+
+.author {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.reload-button {
+  display: flex;
+  align-self: center;
+  width: 30%;
+  background-color: goldenrod;
+  color: white;
+  font-weight: 500;
+  height: 3rem;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.reload-button img {
+  margin-top: 0.8rem;
+  margin-right: 0.5rem;
+}
+
 /* --------------Calculator------------- */
 
 .grid-container {
