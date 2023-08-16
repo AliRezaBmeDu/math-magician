@@ -20,8 +20,6 @@ const Quote = () => {
       });
       const json = await response.json();
       setData(json);
-      console.log('JSON response: ', json);
-      console.log('data: ', data);
     } catch (error) {
       setIsError('Error loading Data, please press refresh');
     }
