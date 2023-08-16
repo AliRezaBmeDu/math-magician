@@ -21,7 +21,7 @@ const Quote = () => {
       const json = await response.json();
       setData(json);
     } catch (error) {
-      setIsError('Error loading Data, please press refresh');
+      setIsError('Error loading Data, please reload the page to see new quote');
     }
     setIsLoading(false);
   };
