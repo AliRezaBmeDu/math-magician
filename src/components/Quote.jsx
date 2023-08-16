@@ -3,11 +3,10 @@ import spinLogo from './arrow-clockwise.svg';
 
 const Quote = () => {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const apiKey = 'vA0/JB/b2F3uIe+n+OUoAA==ssQu65YPz7YnNSOQ';
 
   const fetchQuoteData = async () => {
-    setIsLoading(true);
     try {
       const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=happiness', {
         headers: {
@@ -16,6 +15,8 @@ const Quote = () => {
       });
       const json = await response.json();
       setData(json);
+      console.log('JSON response: ', json);
+      console.log('data: ', data);
     } catch (error) {
       console.error('Request failed:', error);
     }
@@ -26,11 +27,17 @@ const Quote = () => {
     fetchQuoteData();
   }, []);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) {
+    return (
+      <div className="quote-container">
+        <div>Loading...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="quote-container">
-      <div className="quote">{ data[0].quote }</div>
+      <div className="quote"><p>{ data[0].quote }</p></div>
       <div className="author">{ data[0].author }</div>
       <button type="button" className="reload-button">
         <img src={spinLogo} alt="reload-icon" />
