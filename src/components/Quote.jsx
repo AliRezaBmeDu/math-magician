@@ -10,7 +10,7 @@ const Quote = () => {
   const types = ['communications', 'computers', 'cool', 'courage', 'education', 'experience', 'faith', 'family',
     'famous', 'leadership', 'learning', 'money', 'morning', 'movies', 'success', 'legal', 'life', 'love',
   ];
-  const category = types[Math.floor(10 * Math.random(types.length - 2))];
+  const category = types[Math.floor(10 * Math.random(types.length - 1))];
   const fetchQuoteData = async () => {
     try {
       const response = await fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
@@ -21,7 +21,7 @@ const Quote = () => {
       const json = await response.json();
       setData(json);
     } catch (error) {
-      setIsError('Error loading Data, please reload the page to see new quote');
+      setIsError('Error loading Data, please refresh to see new quote');
     }
     setIsLoading(false);
   };
@@ -49,6 +49,10 @@ const Quote = () => {
       <div className="quote-container">
         <div className="quote-author">
           <p>{ isError }</p>
+          <button type="button" className="reload-button" onClick={handleClick}>
+            <img src={spinLogo} alt="reload-icon" />
+            <p>Refresh</p>
+          </button>
         </div>
       </div>
     );

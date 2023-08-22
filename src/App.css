@@ -11,18 +11,69 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: lightyellow;
 }
 
 #root {
   height: 100%;
 }
 
-.main {
+.navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-inline: 10%;
+}
+
+.navbar h1 {
+  font-size: 3rem;
+  color: goldenrod;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 5%;
+  width: 100%;
+  font-size: 1.5rem;
+  position: relative;
+  top: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+/* ---------------Home Page------------------ */
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 10%;
+}
+
+.homepage h2 {
+  font-size: 2.5rem;
+}
+
+.homepage p {
+  font-size: 1.5rem;
+  width: 94%;
+  line-height: 2rem;
+}
+
+/* --------------Calculation Page------------- */
+
+.calculator-body {
+  display: flex;
   flex-wrap: wrap;
-  padding: 2rem;
-  margin: auto;
+  justify-content: space-around;
+  padding: 10%;
+  gap: 2%;
+}
+
+.description {
+  width: 48%;
 }
 
 /* --------------Quote------------------ */
@@ -30,10 +81,13 @@ body {
 .quote-container {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  margin: 5rem auto;
+  width: 50%;
+  margin: auto;
   padding: 1rem;
-  min-height: 400px;
+  min-height: 500px;
+  min-width: 500px;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote-author {
@@ -41,9 +95,6 @@ body {
   width: 100%;
   height: 100%;
   font-style: italic;
-  background-image: url('../public/assets/quote-frame.png');
-  background-size: contain;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,13 +103,13 @@ body {
 
 .quote {
   color: var(--operator-color);
-  font-size: 1.5rem;
-  margin: auto;
+  font-size: 2rem;
   max-width: 80%;
+  text-align: center;
 }
 
 .author {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -79,6 +130,7 @@ body {
 .reload-button img {
   margin-top: 0.8rem;
   margin-right: 0.5rem;
+  margin-left: 2rem;
 }
 
 /* --------------Calculator------------- */
@@ -86,11 +138,8 @@ body {
 .grid-container {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
-  grid-gap: 0.5px;
-  width: 400px;
-  margin: 5rem auto; /* Center the grid container */
+  width: 46%;
   border-radius: 4px;
-  padding: 1rem;
 }
 
 .row {
@@ -142,6 +191,8 @@ span {
   background-color: var(--operator-color);
 }
 
+/* -----------button action----------------- */
+
 .grid-container .row button:hover {
   background-color: darkcyan;
   color: white;
@@ -160,4 +211,13 @@ span {
 .row:not(:first-child) button:last-child:active {
   background-color: rgb(26, 7, 1);
   color: white;
+}
+
+.reload-button:hover {
+  background-color: rgb(148, 113, 25);
+}
+
+.reload-button:active {
+  background-color: rgb(243, 247, 51);
+  color: black;
 }
