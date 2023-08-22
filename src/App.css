@@ -19,7 +19,7 @@ body {
 
 .main {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 2rem;
   margin: auto;
@@ -33,7 +33,10 @@ body {
   width: 400px;
   margin: 5rem auto;
   padding: 1rem;
-  min-height: 400px;
+  min-height: 500px;
+  min-width: 500px;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote-author {
@@ -86,9 +89,8 @@ body {
 .grid-container {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
-  grid-gap: 0.5px;
   width: 400px;
-  margin: 5rem auto; /* Center the grid container */
+  margin: auto; /* Center the grid container */
   border-radius: 4px;
   padding: 1rem;
 }
@@ -142,6 +144,8 @@ span {
   background-color: var(--operator-color);
 }
 
+/*-----------button action-----------------*/
+
 .grid-container .row button:hover {
   background-color: darkcyan;
   color: white;
@@ -160,4 +164,13 @@ span {
 .row:not(:first-child) button:last-child:active {
   background-color: rgb(26, 7, 1);
   color: white;
+}
+
+.reload-button:hover {
+  background-color: rgb(148, 113, 25);
+}
+
+.reload-button:active {
+  background-color: rgb(243, 247, 51);
+  color: black;
 }
