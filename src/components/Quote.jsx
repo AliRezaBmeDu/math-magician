@@ -49,7 +49,7 @@ const Quote = () => {
       <div className="quote-container">
         <div className="quote-author">
           <p>{ isError }</p>
-          <button type="button" className="reload-button" onClick={handleClick}>
+          <button type="button" className="reload-button" name="refresh" onClick={handleClick}>
             <img src={spinLogo} alt="reload-icon" />
             <p>Refresh</p>
           </button>
@@ -79,7 +79,7 @@ const Quote = () => {
           </p>
         </div>
       )}
-      <button type="button" className="reload-button" onClick={handleClick}>
+      <button type="button" className="reload-button" name="refresh" onClick={handleClick}>
         <img src={spinLogo} alt="reload-icon" />
         <p>Refresh</p>
       </button>

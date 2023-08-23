@@ -78,6 +78,13 @@ body {
 
 /* --------------Quote------------------ */
 
+.quote-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--display-color);
+  margin-bottom: -2rem;
+}
+
 .quote-container {
   display: flex;
   flex-direction: column;
