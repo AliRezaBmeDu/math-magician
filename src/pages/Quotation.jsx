@@ -2,7 +2,10 @@ import React from 'react';
 import Quote from '../components/Quote';
 
 const Quotation = () => (
-  <Quote />
+  <>
+    <h2 className="quote-heading">Random Quote</h2>
+    <Quote />
+  </>
 );
 
 export default Quotation;

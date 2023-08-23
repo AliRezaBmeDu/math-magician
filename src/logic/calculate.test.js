@@ -1,4 +1,4 @@
-import calculate from "./calculate";
+import calculate from './calculate';
 
 describe('calculate function', () => {
   it('should clear the calculator', () => {
@@ -30,7 +30,6 @@ describe('calculate function', () => {
       operation: '+',
     });
   });
-
 
   it('should toggle the sign of the current value', () => {
     const obj = {
@@ -92,5 +91,4 @@ describe('calculate function', () => {
       operation: null,
     });
   });
-
 });
