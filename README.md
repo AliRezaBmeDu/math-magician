@@ -8,6 +8,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -57,6 +58,16 @@
 - **Dynamic Quote update**
 - **Calculator**
 - **Single Page Application**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> The following link demonstrates the application.
+
+- [Live Demo Link](https://math-app-xy77.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
